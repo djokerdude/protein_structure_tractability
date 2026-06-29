@@ -147,7 +147,7 @@ src/tractable/
   compute.py    deterministic residue geometry (coverage, domains, gaps)
   scoring.py    transparent additive rubric
   tools/        one small, cached, provenance-stamped fn per data source
-  qc.py         cross-source consistency / anomaly detection      [planned]
+  qc.py         cross-source consistency / anomaly detection
   agent.py      Anthropic tool-use loop: resolution + reasoning    [planned]
   render.py     report → markdown / text                          [planned]
 tests/          unit tests for compute & scoring (no network)
@@ -163,7 +163,7 @@ correct are correct and tested before any LLM touches them.
 - [x] Transparent scoring rubric (tested)
 - [x] Tool interfaces defined against real endpoints
 - [ ] Tool implementations + on-disk response cache
-- [ ] QC / cross-source anomaly detection
+- [x] QC / cross-source anomaly detection (tested)
 - [ ] Agent tool-use loop (Anthropic SDK) + entity resolution
 - [ ] Report rendering + CLI
 - [ ] Rubric calibration against a labelled target set
