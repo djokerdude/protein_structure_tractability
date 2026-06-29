@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+# cached API responses for offline tests are committed under tests/fixtures/;
+# the live response cache is not
+.cache/
+data/*.fasta
+data/*.db
