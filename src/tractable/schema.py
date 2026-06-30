@@ -149,7 +149,8 @@ class PurificationProtocol(BaseModel):
     requires_coexpression: bool = False
     yield_category: YieldCategory = "unknown"
     construct_description: str  # e.g. "TIR domain (560–724), N-terminal His6"
-    notes: str  # one-line LLM summary grounded strictly in the abstract
+    notes: str  # one-line LLM summary grounded strictly in the source text
+    text_source: Literal["methods", "abstract"] = "abstract"  # which text was available
     provenance: Provenance
 
 

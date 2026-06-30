@@ -24,6 +24,7 @@ limits. Commit representative fixture files alongside tests.
 from __future__ import annotations
 
 import json
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -520,15 +521,122 @@ query GetCitations($ids: [String!]!) {
 """
 
 
+# ── PubMed Central full-text (Methods section) ────────────────────────────────
+
+def _extract_methods_section(xml_text: str) -> str | None:
+    """Parse a PMC JATS XML document and return the Methods section text.
+
+    Returns None if there is no parseable body (metadata-only deposit,
+    not open-access) or no Methods-like section is found.
+    """
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError:
+        return None
+
+    body = root.find(".//body")
+    if body is None:
+        return None  # full text not deposited / not open access
+
+    _methods_keywords = {"method", "material", "experimental procedure"}
+
+    def _text(elem: ET.Element) -> str:
+        """Recursively extract all text from an element."""
+        parts: list[str] = []
+        if elem.text:
+            parts.append(elem.text)
+        for child in elem:
+            parts.append(_text(child))
+            if child.tail:
+                parts.append(child.tail)
+        return " ".join(" ".join(p.split()) for p in parts if p.strip())
+
+    # First pass: look for a top-level Methods section by sec-type attribute
+    for sec in body:
+        if sec.get("sec-type", "").lower().startswith("method"):
+            text = _text(sec)
+            if len(text) > 50:
+                return text
+
+    # Second pass: match <title> text of any <sec> anywhere in the body
+    for sec in body.iter("sec"):
+        title_elem = sec.find("title")
+        if title_elem is not None:
+            title_lower = (title_elem.text or "").lower()
+            if any(kw in title_lower for kw in _methods_keywords):
+                text = _text(sec)
+                if len(text) > 50:
+                    return text
+
+    return None
+
+
+def get_pmc_fulltext(pmid: str) -> str | None:
+    """Return the Methods section text for a PubMed paper via PMC open access.
+
+    Two-step: resolve PMID → PMCID via NCBI esearch, then efetch the full
+    JATS XML and parse the Methods section.  Both lookups are cached on disk.
+
+    Returns None if:
+    - The paper is not deposited in PubMed Central (behind a paywall or
+      not yet submitted).
+    - PMC has the record but only as a metadata stub (no full-text body).
+    - No Methods section is identifiable in the XML.
+    """
+    # Step 1: PMID → PMCID
+    pmcid_cache = _cpath("pmc_id", pmid)
+    pmcid_data = _cload(pmcid_cache)
+
+    if pmcid_data is None:
+        try:
+            r = httpx.get(
+                "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+                params={"db": "pmc", "term": f"{pmid}[PMID]", "retmode": "json"},
+                timeout=_TIMEOUT,
+            )
+            r.raise_for_status()
+            ids = r.json().get("esearchresult", {}).get("idlist", [])
+        except Exception:
+            ids = []
+        pmcid_data = {"pmcid": ids[0] if ids else None}
+        _csave(pmcid_cache, pmcid_data)
+
+    pmcid: str | None = pmcid_data.get("pmcid")
+    if not pmcid:
+        return None  # not in PMC
+
+    # Step 2: extract Methods text (cached; avoids storing the full XML)
+    methods_cache = _cpath("pmc_methods", pmcid)
+    methods_data = _cload(methods_cache)
+
+    if methods_data is None:
+        try:
+            r = httpx.get(
+                "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+                params={"db": "pmc", "id": pmcid, "rettype": "full", "retmode": "xml"},
+                timeout=60.0,
+            )
+            r.raise_for_status()
+            methods_text: str | None = _extract_methods_section(r.text)
+        except Exception:
+            methods_text = None
+        methods_data = {"text": methods_text}
+        _csave(methods_cache, methods_data)
+
+    return methods_data.get("text")  # type: ignore[return-value]
+
+
 def get_pubmed_abstracts(pdb_ids: list[str], max_papers: int = 5) -> list[dict]:
-    """Fetch PubMed abstracts for the primary citations of PDB structures.
+    """Fetch literature for the primary citations of PDB structures.
 
-    Uses RCSB GraphQL to resolve PubMed IDs, then NCBI efetch for the abstract
-    text.  Only entries with a PubMed citation and a non-empty abstract are
-    returned.  Both the citation lookup (per batch) and each abstract are cached
-    individually so re-runs are offline.
+    For each entry, tries to obtain the full Methods section from PubMed
+    Central (open-access).  Falls back to the abstract when the paper is not
+    in PMC or is behind a paywall.
 
-    Returns a list of dicts: {pdb_id, pubmed_id, title, abstract}.
+    Returns a list of dicts:
+      pdb_id, pubmed_id, title, abstract, methods_text, text_source
+    where text_source is "methods" if a PMC Methods section was obtained,
+    "abstract" otherwise.  Only entries with at least an abstract are returned.
     """
     if not pdb_ids:
         return []
@@ -559,11 +667,12 @@ def get_pubmed_abstracts(pdb_ids: list[str], max_papers: int = 5) -> list[dict]:
         if pmid and pdb_id:
             pmid_map[str(pmid)] = {"pdb_id": pdb_id, "title": title}
 
-    # Step 2: fetch abstract text from NCBI for each PubMed ID.
+    # Step 2: fetch abstract + attempt PMC full text for each PubMed ID.
     base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
     papers: list[dict] = []
 
     for pmid, meta in pmid_map.items():
+        # Abstract (always try)
         abstract_cache = _cpath("pubmed_abstract", pmid)
         abstract_data = _cload(abstract_cache)
 
@@ -571,30 +680,33 @@ def get_pubmed_abstracts(pdb_ids: list[str], max_papers: int = 5) -> list[dict]:
             try:
                 r = httpx.get(
                     f"{base}/efetch.fcgi",
-                    params={
-                        "db": "pubmed",
-                        "id": pmid,
-                        "rettype": "abstract",
-                        "retmode": "text",
-                    },
+                    params={"db": "pubmed", "id": pmid,
+                            "rettype": "abstract", "retmode": "text"},
                     timeout=_TIMEOUT,
                 )
                 r.raise_for_status()
-                abstract_text = r.text
+                abstract_text: str = r.text
             except Exception:
                 abstract_text = ""
             abstract_data = {"text": abstract_text}
             _csave(abstract_cache, abstract_data)
 
         abstract = abstract_data.get("text", "") if isinstance(abstract_data, dict) else ""
-        if abstract.strip():
-            papers.append(
-                {
-                    "pdb_id": meta["pdb_id"],
-                    "pubmed_id": pmid,
-                    "title": meta["title"],
-                    "abstract": abstract,
-                }
-            )
+        if not abstract.strip():
+            continue  # skip papers with no retrievable text at all
+
+        # PMC full text (best-effort; None if behind paywall or not deposited)
+        methods_text: str | None = get_pmc_fulltext(pmid)
+
+        papers.append(
+            {
+                "pdb_id": meta["pdb_id"],
+                "pubmed_id": pmid,
+                "title": meta["title"],
+                "abstract": abstract,
+                "methods_text": methods_text,
+                "text_source": "methods" if methods_text else "abstract",
+            }
+        )
 
     return papers

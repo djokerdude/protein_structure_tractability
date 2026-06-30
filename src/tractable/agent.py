@@ -201,31 +201,37 @@ class _PurificationExtractionBatch(BaseModel):
 
 
 _PURIFICATION_EXTRACTION_SYSTEM = """\
-You are extracting structured purification protocol information from PubMed abstracts
-of protein crystallography and cryo-EM papers.
+You are extracting structured purification protocol information from structural
+biology papers (protein crystallography and cryo-EM).
 
-For each abstract provided, extract:
+Each paper is labelled with a "Text source" line:
+  "Methods section" — the full Methods/Materials section is provided.
+                      Purification details are usually explicit here.
+  "Abstract only"   — only the abstract is available; the paper is behind a
+                      paywall or not deposited in PubMed Central.
+                      Details may be sparse; extract what you can.
+
+For each paper, extract:
 
   pdb_id                 — the PDB ID given in the header (copy it exactly)
   expression_system      — host organism used: "ecoli", "insect", "mammalian",
                            "yeast", "cell_free", or "unknown"
-  purification_steps     — ordered list of chromatography/purification steps mentioned
+  purification_steps     — ordered list of chromatography/purification steps
                            (e.g. ["Ni-NTA affinity", "anion exchange", "size exclusion"])
-  requires_coexpression  — true if the paper states the protein needed a partner
-                           protein or chaperone for solubility or stability
+  requires_coexpression  — true if the text states the protein needed a binding
+                           partner or chaperone for solubility or stability
   yield_category         — "high" / "medium" / "low" / "unknown" based on any
-                           explicit quantity or yield statement in the abstract
-  construct_description  — the protein construct described (domain boundaries, tags,
-                           truncations, mutations), e.g. "TIR domain (560–724), His6-tag"
+                           explicit quantity or yield statement in the text
+  construct_description  — the construct used (domain boundaries, tags, mutations),
+                           e.g. "TIR domain (560–724), N-terminal His6-tag"
   notes                  — one concise sentence summarising the key purification
-                           challenge or notable feature, grounded strictly in the abstract
+                           challenge or notable feature
 
 Rules:
-- Extract only information explicitly stated in the abstract.  Do not infer.
-- If a field is not mentioned, use "unknown" / false / empty list as appropriate.
-- Include exactly one protocol entry per PDB ID provided in the input, even if
-  the abstract is short or lacks detail — fill missing fields with unknowns.
-- Keep notes to one sentence and base it solely on the abstract text.
+- Extract only information explicitly stated in the provided text. Do not infer.
+- If a field is not mentioned, use "unknown" / false / empty list.
+- Include exactly one protocol entry per PDB ID, even if details are sparse.
+- Keep notes to one sentence, grounded strictly in the text provided.
 """
 
 
@@ -486,8 +492,13 @@ def extract_purification_protocols(
         return []
 
     papers_text = "\n\n---\n\n".join(
-        f"PDB: {p['pdb_id']}\nTitle: {p['title']}\nPubMed ID: {p.get('pubmed_id', 'N/A')}\n\n"
-        f"Abstract:\n{p['abstract']}"
+        "PDB: {pdb}\nTitle: {title}\nPubMed ID: {pmid}\nText source: {src}\n\n{text}".format(
+            pdb=p["pdb_id"],
+            title=p["title"],
+            pmid=p.get("pubmed_id", "N/A"),
+            src="Methods section" if p.get("methods_text") else "Abstract only",
+            text=p.get("methods_text") or p["abstract"],
+        )
         for p in papers
     )
 
@@ -519,6 +530,7 @@ def extract_purification_protocols(
                 yield_category=ext.yield_category,
                 construct_description=ext.construct_description,
                 notes=ext.notes,
+                text_source=paper["text_source"] if paper else "abstract",
                 provenance=Provenance(
                     source=Source.PUBMED,
                     identifier=pmid or ext.pdb_id,
@@ -615,11 +627,24 @@ def _build_fact_sheet(
         conf_str = "N/A (no structures and no AlphaFold model)"
 
     if protocols:
+        n_methods = sum(1 for p in protocols if p.text_source == "methods")
+        n_abstract = len(protocols) - n_methods
+        n_paywall = len(protocols) - n_methods  # same count, different label
+        paywall_pct = n_paywall / len(protocols) if protocols else 0.0
+
+        access_note = (
+            f"{n_methods}/{len(protocols)} with full Methods section"
+            + (f", {n_paywall} abstract only ({paywall_pct:.0%} behind paywall"
+               f" — only publicly available papers were searched)"
+               if n_paywall else "")
+        )
+
         protocol_lines = "\n".join(
-            "  {pdb}: {sys}, steps: {steps}{coexp}, yield: {yld}\n"
+            "  {pdb} [{src}]: {sys}, steps: {steps}{coexp}, yield: {yld}\n"
             "    Construct: {construct}\n"
             "    Notes: {notes}".format(
                 pdb=p.pdb_id,
+                src=p.text_source,
                 sys=p.expression_system.value,
                 steps=" → ".join(p.purification_steps) if p.purification_steps else "(unspecified)",
                 coexp=", requires co-expression" if p.requires_coexpression else "",
@@ -630,7 +655,7 @@ def _build_fact_sheet(
             for p in protocols
         )
         purif_str = (
-            f"  Protocols from primary citations: {len(protocols)}\n"
+            f"  Protocols from primary citations: {len(protocols)} ({access_note})\n"
             f"  Purification score: {purification_score:.1f} / 100\n"
             f"{protocol_lines}"
         )
