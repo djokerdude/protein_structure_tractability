@@ -13,6 +13,12 @@ Four phases, strictly separated:
 3. Deterministic math — compute.py, scoring.py, qc.py produce every number that
                         appears in the report.  LLM is not involved.
 
+3b. Purification      — Fetch PubMed abstracts for high-res structures, then one
+                        structured LLM call extracts protocol fields.  The LLM
+                        writes only `notes` (one grounded sentence); all other
+                        fields are validated against controlled vocabularies and
+                        scored by pure code in purification.py.
+
 4. Narrative          — One final LLM call, handed the complete fact sheet.
                         Writes *only* ``reasoning`` and ``recommended_strategy``.
                         The prompt forbids producing any number not already in
@@ -34,20 +40,26 @@ import anthropic
 from pydantic import BaseModel
 
 from . import compute, qc, scoring
+from .purification import purification_tractability_score
 from .schema import (
     Domain,
     ExperimentalStructure,
+    ExpressionSystem,
     Provenance,
+    PurificationProtocol,
     QCFlag,
     ResidueRange,
     ScoreBreakdown,
+    Source,
     TractabilityReport,
+    YieldCategory,
 )
 from .tools import (
     UniProtEntry,
     get_alphafold_plddt,
     get_ncbi_record,
     get_pdb_structures,
+    get_pubmed_abstracts,
     get_sifts_coverage,
     get_uniprot_entry,
     search_uniprot,
@@ -167,6 +179,53 @@ Protocol:
 - If candidates are genuinely ambiguous (different proteins, not just different
   organisms for the same well-known gene), call ask_user.
 - Once confident, call select_accession.  Do not end the turn without calling it.
+"""
+
+
+# ── Purification extraction models ────────────────────────────────────────────
+
+class _SingleProtocolExtraction(BaseModel):
+    """LLM-filled fields for one PDB structure's purification protocol."""
+
+    pdb_id: str
+    expression_system: ExpressionSystem
+    purification_steps: list[str]
+    requires_coexpression: bool = False
+    yield_category: YieldCategory = "unknown"
+    construct_description: str
+    notes: str  # one-line grounded summary — only LLM-authored field
+
+
+class _PurificationExtractionBatch(BaseModel):
+    protocols: list[_SingleProtocolExtraction]
+
+
+_PURIFICATION_EXTRACTION_SYSTEM = """\
+You are extracting structured purification protocol information from PubMed abstracts
+of protein crystallography and cryo-EM papers.
+
+For each abstract provided, extract:
+
+  pdb_id                 — the PDB ID given in the header (copy it exactly)
+  expression_system      — host organism used: "ecoli", "insect", "mammalian",
+                           "yeast", "cell_free", or "unknown"
+  purification_steps     — ordered list of chromatography/purification steps mentioned
+                           (e.g. ["Ni-NTA affinity", "anion exchange", "size exclusion"])
+  requires_coexpression  — true if the paper states the protein needed a partner
+                           protein or chaperone for solubility or stability
+  yield_category         — "high" / "medium" / "low" / "unknown" based on any
+                           explicit quantity or yield statement in the abstract
+  construct_description  — the protein construct described (domain boundaries, tags,
+                           truncations, mutations), e.g. "TIR domain (560–724), His6-tag"
+  notes                  — one concise sentence summarising the key purification
+                           challenge or notable feature, grounded strictly in the abstract
+
+Rules:
+- Extract only information explicitly stated in the abstract.  Do not infer.
+- If a field is not mentioned, use "unknown" / false / empty list as appropriate.
+- Include exactly one protocol entry per PDB ID provided in the input, even if
+  the abstract is short or lacks detail — fill missing fields with unknowns.
+- Keep notes to one sentence and base it solely on the abstract text.
 """
 
 
@@ -411,6 +470,70 @@ def compute_facts(
     }
 
 
+# ── Phase 3b: Purification extraction ────────────────────────────────────────
+
+def extract_purification_protocols(
+    papers: list[dict],
+    client: anthropic.Anthropic,
+) -> list[PurificationProtocol]:
+    """Extract structured purification protocols from PubMed abstracts.
+
+    The LLM fills controlled-vocabulary fields (expression_system, steps, etc.)
+    validated against the schema.  The ``notes`` field is the only free-text
+    LLM output and must be grounded strictly in the abstract.
+    """
+    if not papers:
+        return []
+
+    papers_text = "\n\n---\n\n".join(
+        f"PDB: {p['pdb_id']}\nTitle: {p['title']}\nPubMed ID: {p.get('pubmed_id', 'N/A')}\n\n"
+        f"Abstract:\n{p['abstract']}"
+        for p in papers
+    )
+
+    response = client.messages.parse(
+        model=_MODEL,
+        max_tokens=_MAX_TOKENS,
+        system=_PURIFICATION_EXTRACTION_SYSTEM,
+        messages=[{"role": "user", "content": papers_text}],
+        output_format=_PurificationExtractionBatch,
+    )
+
+    if response.parsed_output is None:
+        return []
+
+    now = datetime.now(timezone.utc)
+    paper_by_pdb = {p["pdb_id"]: p for p in papers}
+    protocols: list[PurificationProtocol] = []
+
+    for ext in response.parsed_output.protocols:
+        paper = paper_by_pdb.get(ext.pdb_id)
+        pmid = paper["pubmed_id"] if paper else None
+        protocols.append(
+            PurificationProtocol(
+                pdb_id=ext.pdb_id,
+                pubmed_id=pmid,
+                expression_system=ext.expression_system,
+                purification_steps=ext.purification_steps,
+                requires_coexpression=ext.requires_coexpression,
+                yield_category=ext.yield_category,
+                construct_description=ext.construct_description,
+                notes=ext.notes,
+                provenance=Provenance(
+                    source=Source.PUBMED,
+                    identifier=pmid or ext.pdb_id,
+                    url=(
+                        f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+                        if pmid else None
+                    ),
+                    retrieved_at=now,
+                ),
+            )
+        )
+
+    return protocols
+
+
 # ── Phase 4: LLM narrative ────────────────────────────────────────────────────
 
 class _Narrative(BaseModel):
@@ -427,17 +550,19 @@ A fact sheet with all computed values is provided.
 Your output:
   reasoning            — 3–6 bullet strings explaining WHY the score is what it is.
                          Reference the computed facts (domains solved, disorder fraction,
-                         pLDDT gaps, etc.).  Do not introduce any new numbers.
+                         high-res structure fraction, expression system, purification
+                         steps, etc.).  Do not introduce any new numbers.
   recommended_strategy — 2–4 bullet strings suggesting concrete experimental steps
                          appropriate to this protein's tractability profile
                          (e.g. domain construct design, cryo-EM for complexes,
-                         NMR for small disordered regions, co-expression partners).
+                         NMR for small disordered regions, co-expression partners,
+                         preferred expression system based on prior success).
 
 Hard rules:
 - Write action-oriented bullets (not "I recommend X" but "Express the kinase domain
   independently (residues 100–350)").
 - Every factual claim must be derivable from the fact sheet — do not hallucinate
-  domain names, PDB IDs, or organism details not present there.
+  domain names, PDB IDs, expression systems, or organism details not present there.
 - Do not produce any numbers that are not already in the fact sheet.
 - Tone: expert structural biologist writing for a colleague.  Precise, not verbose.
 """
@@ -450,6 +575,8 @@ def _build_fact_sheet(
     organism: str,
     seq_len: int,
     facts: dict[str, Any],
+    protocols: list[PurificationProtocol],
+    purification_score: float | None,
     score: ScoreBreakdown,
     qc_flags: list[QCFlag],
 ) -> str:
@@ -487,6 +614,29 @@ def _build_fact_sheet(
     else:
         conf_str = "N/A (no structures and no AlphaFold model)"
 
+    if protocols:
+        protocol_lines = "\n".join(
+            "  {pdb}: {sys}, steps: {steps}{coexp}, yield: {yld}\n"
+            "    Construct: {construct}\n"
+            "    Notes: {notes}".format(
+                pdb=p.pdb_id,
+                sys=p.expression_system.value,
+                steps=" → ".join(p.purification_steps) if p.purification_steps else "(unspecified)",
+                coexp=", requires co-expression" if p.requires_coexpression else "",
+                yld=p.yield_category,
+                construct=p.construct_description or "(unspecified)",
+                notes=p.notes,
+            )
+            for p in protocols
+        )
+        purif_str = (
+            f"  Protocols from primary citations: {len(protocols)}\n"
+            f"  Purification score: {purification_score:.1f} / 100\n"
+            f"{protocol_lines}"
+        )
+    else:
+        purif_str = "  No purification protocol data available (no high-res structures with PubMed citations)"
+
     return (
         f"Protein: {protein_name} ({accession}, {organism})\n"
         f"Query: {query}\n"
@@ -502,12 +652,15 @@ def _build_fact_sheet(
         f"Missing regions (≥10 aa, in annotated domains/disordered spans):\n"
         f"  {missing_str}\n"
         f"\n"
+        f"Purification tractability:\n{purif_str}\n"
+        f"\n"
         f"Tractability score:\n"
-        f"  Coverage points  : {score.coverage_points:.2f} / 45.0\n"
-        f"  Domain points    : {score.domain_points:.2f} / 30.0\n"
-        f"  Confidence points: {score.confidence_points:.2f} / 25.0\n"
-        f"  Disorder penalty : {score.disorder_penalty:.2f} / -20.0\n"
-        f"  TOTAL            : {score.total:.2f} / 100.0  [{score.rubric_version}]\n"
+        f"  Coverage points     : {score.coverage_points:.2f} / {scoring.COVERAGE_WEIGHT:.1f}\n"
+        f"  Domain points       : {score.domain_points:.2f} / {scoring.DOMAIN_WEIGHT:.1f}\n"
+        f"  Confidence points   : {score.confidence_points:.2f} / {scoring.CONFIDENCE_WEIGHT:.1f}\n"
+        f"  Purification points : {score.purification_points:.2f} / {scoring.PURIFICATION_WEIGHT:.1f}\n"
+        f"  Disorder penalty    : {score.disorder_penalty:.2f} / -{scoring.DISORDER_WEIGHT:.1f}\n"
+        f"  TOTAL               : {score.total:.2f} / 100.0  [{score.rubric_version}]\n"
         f"\n"
         f"QC flags:\n{flag_lines}\n"
     )
@@ -521,6 +674,8 @@ def write_narrative(
     organism: str,
     seq_len: int,
     facts: dict[str, Any],
+    protocols: list[PurificationProtocol],
+    purification_score: float | None,
     score: ScoreBreakdown,
     qc_flags: list[QCFlag],
     client: anthropic.Anthropic,
@@ -537,6 +692,8 @@ def write_narrative(
         organism=organism,
         seq_len=seq_len,
         facts=facts,
+        protocols=protocols,
+        purification_score=purification_score,
         score=score,
         qc_flags=qc_flags,
     )
@@ -586,11 +743,31 @@ def assess(query: str, api_key: str | None = None) -> TractabilityReport:
     # 3. Deterministic geometry.
     facts = compute_facts(entry, structures, covered_ranges, plddt)
 
+    # 3b. Purification protocol extraction from high-res structure primary citations.
+    high_res_pdb_ids = [
+        s.pdb_id
+        for s in structures
+        if s.resolution_a is not None and s.resolution_a < scoring.HIGH_RES_THRESHOLD_A
+    ]
+    papers: list[dict] = []
+    protocols: list[PurificationProtocol] = []
+    purification_score_val: float | None = None
+
+    if high_res_pdb_ids:
+        try:
+            papers = get_pubmed_abstracts(high_res_pdb_ids, max_papers=5)
+            if papers:
+                protocols = extract_purification_protocols(papers, client)
+                purification_score_val = purification_tractability_score(protocols)
+        except Exception as exc:
+            print(f"[purification] warning: {exc}")
+
     # 4. Transparent additive score.
     score = scoring.score(
         coverage_fraction=facts["coverage_fraction"],
         solvable_domain_fraction=facts["solvable_domain_fraction"],
         confidence_score=facts["confidence_score"],
+        purification_score=purification_score_val,
         disordered_fraction=facts["disordered_fraction"],
     )
 
@@ -616,14 +793,18 @@ def assess(query: str, api_key: str | None = None) -> TractabilityReport:
         organism=entry.organism,
         seq_len=entry.sequence_length,
         facts=facts,
+        protocols=protocols,
+        purification_score=purification_score_val,
         score=score,
         qc_flags=qc_flags,
         client=client,
     )
 
-    # 7. Assemble provenance list (entry + each structure's provenance).
+    # 7. Assemble provenance list.
     all_provenance: list[Provenance] = [entry.provenance] + [
         s.provenance for s in structures
+    ] + [
+        p.provenance for p in protocols
     ]
 
     return TractabilityReport(
@@ -638,6 +819,8 @@ def assess(query: str, api_key: str | None = None) -> TractabilityReport:
         missing_regions=facts["missing_regions"],
         disordered_fraction=facts["disordered_fraction"],
         mean_plddt_uncovered=facts["mean_plddt_uncovered"],
+        purification_protocols=protocols,
+        purification_score=purification_score_val,
         high_res_fraction=facts["high_res_fraction"],
         confidence_score=facts["confidence_score"],
         score=score,

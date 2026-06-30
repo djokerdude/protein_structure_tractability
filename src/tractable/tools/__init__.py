@@ -503,3 +503,98 @@ def get_ncbi_record(accession_or_name: str) -> dict:
     }
     _csave(cache, result)
     return result
+
+
+# ── get_pubmed_abstracts ──────────────────────────────────────────────────────
+
+_RCSB_CITATION_GQL = """
+query GetCitations($ids: [String!]!) {
+  entries(entry_ids: $ids) {
+    rcsb_id
+    rcsb_primary_citation {
+      pdbx_database_id_PubMed
+      title
+    }
+  }
+}
+"""
+
+
+def get_pubmed_abstracts(pdb_ids: list[str], max_papers: int = 5) -> list[dict]:
+    """Fetch PubMed abstracts for the primary citations of PDB structures.
+
+    Uses RCSB GraphQL to resolve PubMed IDs, then NCBI efetch for the abstract
+    text.  Only entries with a PubMed citation and a non-empty abstract are
+    returned.  Both the citation lookup (per batch) and each abstract are cached
+    individually so re-runs are offline.
+
+    Returns a list of dicts: {pdb_id, pubmed_id, title, abstract}.
+    """
+    if not pdb_ids:
+        return []
+
+    target_ids = pdb_ids[:max_papers]
+
+    # Step 1: resolve PubMed IDs via RCSB citation metadata (batch).
+    batch_key = "_".join(sorted(target_ids))
+    citations_cache = _cpath("rcsb_citations", batch_key)
+    citations_raw = _cload(citations_cache)
+
+    if citations_raw is None:
+        resp = httpx.post(
+            "https://data.rcsb.org/graphql",
+            json={"query": _RCSB_CITATION_GQL, "variables": {"ids": target_ids}},
+            timeout=_TIMEOUT,
+        )
+        resp.raise_for_status()
+        citations_raw = resp.json().get("data", {}).get("entries", []) or []
+        _csave(citations_cache, citations_raw)
+
+    pmid_map: dict[str, dict] = {}  # pmid → {pdb_id, title}
+    for entry in citations_raw:
+        pdb_id = entry.get("rcsb_id", "")
+        cite = entry.get("rcsb_primary_citation") or {}
+        pmid = cite.get("pdbx_database_id_PubMed")
+        title = cite.get("title", "")
+        if pmid and pdb_id:
+            pmid_map[str(pmid)] = {"pdb_id": pdb_id, "title": title}
+
+    # Step 2: fetch abstract text from NCBI for each PubMed ID.
+    base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
+    papers: list[dict] = []
+
+    for pmid, meta in pmid_map.items():
+        abstract_cache = _cpath("pubmed_abstract", pmid)
+        abstract_data = _cload(abstract_cache)
+
+        if abstract_data is None:
+            try:
+                r = httpx.get(
+                    f"{base}/efetch.fcgi",
+                    params={
+                        "db": "pubmed",
+                        "id": pmid,
+                        "rettype": "abstract",
+                        "retmode": "text",
+                    },
+                    timeout=_TIMEOUT,
+                )
+                r.raise_for_status()
+                abstract_text = r.text
+            except Exception:
+                abstract_text = ""
+            abstract_data = {"text": abstract_text}
+            _csave(abstract_cache, abstract_data)
+
+        abstract = abstract_data.get("text", "") if isinstance(abstract_data, dict) else ""
+        if abstract.strip():
+            papers.append(
+                {
+                    "pdb_id": meta["pdb_id"],
+                    "pubmed_id": pmid,
+                    "title": meta["title"],
+                    "abstract": abstract,
+                }
+            )
+
+    return papers
