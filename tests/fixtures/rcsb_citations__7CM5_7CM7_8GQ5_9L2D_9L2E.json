@@ -1,0 +1,37 @@
+[
+  {
+    "rcsb_id": "7CM5",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 33053563,
+      "title": "The NAD + -mediated self-inhibition mechanism of pro-neurodegenerative SARM1."
+    }
+  },
+  {
+    "rcsb_id": "9L2E",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 39964720,
+      "title": "Stepwise activation of SARM1 for cell death and axon degeneration revealed by a biosynthetic NMN mimic."
+    }
+  },
+  {
+    "rcsb_id": "9L2D",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 39964720,
+      "title": "Stepwise activation of SARM1 for cell death and axon degeneration revealed by a biosynthetic NMN mimic."
+    }
+  },
+  {
+    "rcsb_id": "8GQ5",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 36550129,
+      "title": "A conformation-specific nanobody targeting the nicotinamide mononucleotide-activated state of SARM1."
+    }
+  },
+  {
+    "rcsb_id": "7CM7",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 33053563,
+      "title": "The NAD + -mediated self-inhibition mechanism of pro-neurodegenerative SARM1."
+    }
+  }
+]
