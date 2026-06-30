@@ -360,8 +360,8 @@ def compute_facts(
 
     disorder_frac = compute.disordered_fraction(disordered, seq_len)
 
-    # Mean pLDDT over uncovered *ordered* residues (exclude disordered spans
-    # because low pLDDT there is expected, not informative for tractability).
+    # Mean pLDDT over uncovered *ordered* residues — used as confidence fallback
+    # when no structures with resolution data are available.
     mean_plddt_uncovered: float | None = None
     if plddt:
         uncovered = compute.subtract_ranges((1, seq_len), covered_ranges)
@@ -373,6 +373,18 @@ def compute_facts(
             for start, end in ordered_uncovered:
                 vals.extend(plddt[start - 1 : end])
             mean_plddt_uncovered = sum(vals) / len(vals) if vals else None
+
+    # Confidence score (0..100):
+    # Primary: fraction of structures with resolution < HIGH_RES_THRESHOLD_A, ×100.
+    # Fallback: mean pLDDT over uncovered ordered residues (for uncharacterised proteins).
+    res_values = [s.resolution_a for s in structures if s.resolution_a is not None]
+    if res_values:
+        n_high_res = sum(1 for r in res_values if r < scoring.HIGH_RES_THRESHOLD_A)
+        high_res_fraction: float | None = n_high_res / len(res_values)
+        confidence_score: float | None = high_res_fraction * 100.0
+    else:
+        high_res_fraction = None
+        confidence_score = mean_plddt_uncovered  # pLDDT fallback
 
     # Missing regions: uncovered sub-spans of annotated domains + disordered.
     # min_length=10 trims trivial boundary gaps.
@@ -387,6 +399,12 @@ def compute_facts(
         "disordered_fraction": round(disorder_frac, 4),
         "mean_plddt_uncovered": (
             round(mean_plddt_uncovered, 2) if mean_plddt_uncovered is not None else None
+        ),
+        "high_res_fraction": (
+            round(high_res_fraction, 4) if high_res_fraction is not None else None
+        ),
+        "confidence_score": (
+            round(confidence_score, 2) if confidence_score is not None else None
         ),
         "enriched_domains": enriched_domains,
         "missing_regions": missing_regions,
@@ -456,11 +474,18 @@ def _build_fact_sheet(
         f"  [{f.severity.value.upper()}] {f.code}: {f.message}" for f in qc_flags
     ) or "  (none)"
 
-    plddt_str = (
-        f"{facts['mean_plddt_uncovered']:.1f}"
-        if facts["mean_plddt_uncovered"] is not None
-        else "N/A"
-    )
+    if facts["high_res_fraction"] is not None:
+        conf_str = (
+            f"High-res structures (< {scoring.HIGH_RES_THRESHOLD_A} Å): "
+            f"{facts['high_res_fraction']:.1%} → confidence score {facts['confidence_score']:.1f} / 100"
+        )
+    elif facts["mean_plddt_uncovered"] is not None:
+        conf_str = (
+            f"Mean pLDDT over uncovered ordered residues: {facts['mean_plddt_uncovered']:.1f} "
+            f"(used as confidence score; no structures with resolution data)"
+        )
+    else:
+        conf_str = "N/A (no structures and no AlphaFold model)"
 
     return (
         f"Protein: {protein_name} ({accession}, {organism})\n"
@@ -470,7 +495,7 @@ def _build_fact_sheet(
         f"Coverage:\n"
         f"  Experimental coverage fraction : {facts['coverage_fraction']:.1%}\n"
         f"  Disordered fraction            : {facts['disordered_fraction']:.1%}\n"
-        f"  Mean pLDDT over uncovered ordered residues: {plddt_str}\n"
+        f"  Confidence: {conf_str}\n"
         f"\n"
         f"Domains:\n{domain_lines}\n"
         f"\n"
@@ -565,7 +590,7 @@ def assess(query: str, api_key: str | None = None) -> TractabilityReport:
     score = scoring.score(
         coverage_fraction=facts["coverage_fraction"],
         solvable_domain_fraction=facts["solvable_domain_fraction"],
-        mean_plddt_uncovered=facts["mean_plddt_uncovered"],
+        confidence_score=facts["confidence_score"],
         disordered_fraction=facts["disordered_fraction"],
     )
 
@@ -613,6 +638,8 @@ def assess(query: str, api_key: str | None = None) -> TractabilityReport:
         missing_regions=facts["missing_regions"],
         disordered_fraction=facts["disordered_fraction"],
         mean_plddt_uncovered=facts["mean_plddt_uncovered"],
+        high_res_fraction=facts["high_res_fraction"],
+        confidence_score=facts["confidence_score"],
         score=score,
         reasoning=narrative.reasoning,
         recommended_strategy=narrative.recommended_strategy,

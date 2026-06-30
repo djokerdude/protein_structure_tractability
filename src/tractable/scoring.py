@@ -2,7 +2,7 @@
 
 The score is an explicit additive rubric, not a black box and not an LLM guess.
 Every sub-score is a named, documented function of quantities computed in
-``compute``. Weights are v1 defaults declared as module constants and meant to
+``compute``. Weights are v2 defaults declared as module constants and meant to
 be *calibrated* against a labelled benchmark of known-tractable vs.
 known-intractable targets (see README roadmap) — they are not claimed to be
 final.
@@ -10,7 +10,7 @@ final.
     total = clamp(
         COVERAGE_WEIGHT      * coverage_fraction
       + DOMAIN_WEIGHT        * solvable_domain_fraction
-      + CONFIDENCE_WEIGHT    * (mean_plddt_uncovered / 100)
+      + CONFIDENCE_WEIGHT    * (confidence_score / 100)
       - DISORDER_WEIGHT      * disordered_fraction,
         0, 100,
     )
@@ -20,8 +20,13 @@ Interpretation of the four terms:
 * coverage          how much of the chain already has experimental structure.
 * solvable domains  fraction of annotated folded domains that are either solved
                     or compact + high-confidence, i.e. separately expressible.
-* gap confidence    AlphaFold pLDDT over the *uncovered* ordered regions; high
-                    confidence means the gaps are likely orderly and fillable.
+* confidence        when experimental structures exist: fraction of those
+                    structures with resolution < HIGH_RES_THRESHOLD_A (×100).
+                    High-resolution structures indicate the protein is amenable
+                    to precise structure determination. When no structures exist:
+                    falls back to mean AlphaFold pLDDT over uncovered ordered
+                    regions, which estimates whether the gaps are likely orderly
+                    and fillable.
 * disorder penalty  large flexible/disordered fractions hurt full-length
                     tractability (linkers that resist crystallisation and blur
                     in cryo-EM maps).
@@ -31,12 +36,15 @@ from __future__ import annotations
 
 from .schema import ScoreBreakdown
 
-RUBRIC_VERSION = "v1-uncalibrated"
+RUBRIC_VERSION = "v2-uncalibrated"
 
 COVERAGE_WEIGHT = 45.0
 DOMAIN_WEIGHT = 30.0
 CONFIDENCE_WEIGHT = 25.0
 DISORDER_WEIGHT = 20.0  # subtracted
+
+# Structures at or below this resolution (Å) count as high-resolution.
+HIGH_RES_THRESHOLD_A = 3.0
 
 
 def _clamp(x: float, lo: float, hi: float) -> float:
@@ -47,7 +55,7 @@ def score(
     *,
     coverage_fraction: float,
     solvable_domain_fraction: float,
-    mean_plddt_uncovered: float | None,
+    confidence_score: float | None,
     disordered_fraction: float,
 ) -> ScoreBreakdown:
     """Compute the additive tractability score and its breakdown.
@@ -56,8 +64,11 @@ def score(
         coverage_fraction: 0..1, residues with experimental coverage / length.
         solvable_domain_fraction: 0..1, fraction of annotated domains that are
             solved or compact + high-confidence (computed upstream).
-        mean_plddt_uncovered: mean AlphaFold pLDDT (0..100) over uncovered
-            ordered regions, or None if there are no such regions / no model.
+        confidence_score: 0..100 unified confidence metric. When experimental
+            structures with resolution data exist, this is the fraction of those
+            structures below HIGH_RES_THRESHOLD_A multiplied by 100. When no
+            such structures exist, falls back to mean AlphaFold pLDDT over
+            uncovered ordered regions. None if neither source is available.
         disordered_fraction: 0..1, fraction of the chain that is disordered.
     """
     for name, val in (
@@ -70,10 +81,8 @@ def score(
 
     coverage_points = COVERAGE_WEIGHT * coverage_fraction
     domain_points = DOMAIN_WEIGHT * solvable_domain_fraction
-    # If there are no uncovered ordered regions, there is no gap to score and the
-    # confidence term contributes nothing (neither reward nor penalty).
-    plddt = 0.0 if mean_plddt_uncovered is None else _clamp(mean_plddt_uncovered, 0.0, 100.0)
-    confidence_points = CONFIDENCE_WEIGHT * (plddt / 100.0)
+    cs = 0.0 if confidence_score is None else _clamp(confidence_score, 0.0, 100.0)
+    confidence_points = CONFIDENCE_WEIGHT * (cs / 100.0)
     disorder_penalty = -DISORDER_WEIGHT * disordered_fraction
 
     total = _clamp(

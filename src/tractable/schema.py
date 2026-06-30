@@ -143,9 +143,11 @@ class TractabilityReport(BaseModel):
     domains: list[Domain]
     missing_regions: list[ResidueRange]
     disordered_fraction: float = Field(ge=0.0, le=1.0)
-    mean_plddt_uncovered: Optional[float] = None
+    mean_plddt_uncovered: Optional[float] = None  # pLDDT fallback; None when res-based confidence used
 
     # --- assessment (deterministic score, LLM narrative) ---
+    high_res_fraction: Optional[float] = None  # fraction of structures < HIGH_RES_THRESHOLD_A
+    confidence_score: Optional[float] = None   # 0..100; drives confidence_points in score
     score: ScoreBreakdown
     reasoning: list[str]  # LLM, grounded strictly in the fields above
     recommended_strategy: list[str]  # LLM, domain reasoning over the facts

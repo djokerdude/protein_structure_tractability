@@ -7,7 +7,7 @@ def test_perfect_score_is_capped():
     s = scoring.score(
         coverage_fraction=1.0,
         solvable_domain_fraction=1.0,
-        mean_plddt_uncovered=100.0,
+        confidence_score=100.0,
         disordered_fraction=0.0,
     )
     assert s.total == 100.0
@@ -18,7 +18,7 @@ def test_floor_at_zero():
     s = scoring.score(
         coverage_fraction=0.0,
         solvable_domain_fraction=0.0,
-        mean_plddt_uncovered=0.0,
+        confidence_score=0.0,
         disordered_fraction=1.0,
     )
     assert s.total == 0.0
@@ -29,7 +29,7 @@ def test_breakdown_sums_to_total_when_unclamped():
     s = scoring.score(
         coverage_fraction=0.42,
         solvable_domain_fraction=0.67,
-        mean_plddt_uncovered=75.0,
+        confidence_score=75.0,
         disordered_fraction=0.15,
     )
     expected = (
@@ -38,11 +38,11 @@ def test_breakdown_sums_to_total_when_unclamped():
     assert abs(s.total - round(expected, 2)) < 0.011
 
 
-def test_none_plddt_contributes_zero_confidence():
+def test_none_confidence_score_contributes_zero():
     s = scoring.score(
         coverage_fraction=0.5,
         solvable_domain_fraction=0.5,
-        mean_plddt_uncovered=None,
+        confidence_score=None,
         disordered_fraction=0.0,
     )
     assert s.confidence_points == 0.0
@@ -53,7 +53,7 @@ def test_rejects_out_of_range_fraction():
         scoring.score(
             coverage_fraction=1.5,
             solvable_domain_fraction=0.5,
-            mean_plddt_uncovered=80.0,
+            confidence_score=80.0,
             disordered_fraction=0.0,
         )
     except ValueError:
@@ -65,7 +65,7 @@ def test_rubric_version_propagates():
     s = scoring.score(
         coverage_fraction=0.5,
         solvable_domain_fraction=0.5,
-        mean_plddt_uncovered=50.0,
+        confidence_score=50.0,
         disordered_fraction=0.1,
     )
     assert s.rubric_version == scoring.RUBRIC_VERSION
