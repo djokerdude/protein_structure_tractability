@@ -26,6 +26,10 @@ import os
 from datetime import datetime, timezone
 from typing import Any, cast
 
+from dotenv import load_dotenv
+
+load_dotenv()  # loads ANTHROPIC_API_KEY from .env if present
+
 import anthropic
 from pydantic import BaseModel
 

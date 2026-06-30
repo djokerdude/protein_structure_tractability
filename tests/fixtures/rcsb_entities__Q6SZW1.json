@@ -1,0 +1,607 @@
+[
+  {
+    "entry_id": "7CM5",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.6,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "7NAI",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.74,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "7NAJ",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.6,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "9MW2",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.75,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "9MW1",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.1,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "9L2G",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.27,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "9L2F",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.55,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "9L2E",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.46,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "9L2D",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.83,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "9HQH",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.988,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "9HQF",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.73,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "9HQ0",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.13,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "8P2L",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.68,
+    "unp_ranges": [
+      [
+        26,
+        570
+      ]
+    ]
+  },
+  {
+    "entry_id": "8GQ5",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.7,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "8GNJ",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.78,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "8GNI",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.74,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "8D0J",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.94,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "8D0I",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.0,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "8D0H",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.37,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "8D0G",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.99,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "8D0F",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.74,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "8D0E",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.88,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "8D0D",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.96,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "8D0C",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.09,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "7QG0",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 4.02,
+    "unp_ranges": [
+      [
+        26,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "7NAL",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.0,
+    "unp_ranges": [
+      [
+        28,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "7NAK",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.9,
+    "unp_ranges": [
+      [
+        28,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "7NAH",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.79,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "7NAG",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.72,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "7LD0",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.1,
+    "unp_ranges": [
+      [
+        28,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "7KNQ",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.4,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "7DJT",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.8,
+    "unp_ranges": [
+      [
+        27,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "7CM7",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.6,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "7CM6",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.0,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "7ANW",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.68,
+    "unp_ranges": [
+      [
+        26,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "6ZG1",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.77,
+    "unp_ranges": [
+      [
+        387,
+        548
+      ]
+    ]
+  },
+  {
+    "entry_id": "6ZG0",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 7.7,
+    "unp_ranges": [
+      [
+        26,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "6ZFX",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.88,
+    "unp_ranges": [
+      [
+        26,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "6WPK",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.3,
+    "unp_ranges": [
+      [
+        49,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "6QWV",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.47,
+    "unp_ranges": [
+      [
+        387,
+        548
+      ]
+    ]
+  },
+  {
+    "entry_id": "6O1B",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.67,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "6O0V",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.07,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "6O0U",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 3.03,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "6O0T",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.8,
+    "unp_ranges": [
+      [
+        409,
+        561
+      ]
+    ]
+  },
+  {
+    "entry_id": "6O0S",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.7,
+    "unp_ranges": [
+      [
+        409,
+        561
+      ]
+    ]
+  },
+  {
+    "entry_id": "6O0R",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.8,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "6O0Q",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.8,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "10RC",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.9,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "10RB",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 2.05,
+    "unp_ranges": [
+      [
+        558,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "10RA",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.79,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "9UGJ",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.85,
+    "unp_ranges": [
+      [
+        1,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "9UGA",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.06,
+    "unp_ranges": [
+      [
+        28,
+        724
+      ]
+    ]
+  },
+  {
+    "entry_id": "9TZY",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.94,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "9TZW",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 3.3,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  },
+  {
+    "entry_id": "9MW3",
+    "method": "X-RAY DIFFRACTION",
+    "resolution": 1.93,
+    "unp_ranges": [
+      [
+        560,
+        700
+      ]
+    ]
+  }
+]

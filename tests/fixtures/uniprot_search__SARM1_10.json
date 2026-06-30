@@ -1,0 +1,1356 @@
+{
+  "results": [
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "F1QWA8",
+      "organism": {
+        "scientificName": "Danio rerio",
+        "commonName": "Zebrafish",
+        "synonyms": [
+          "Brachydanio rerio"
+        ],
+        "taxonId": 7955,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Actinopterygii",
+          "Neopterygii",
+          "Teleostei",
+          "Ostariophysi",
+          "Cypriniformes",
+          "Danionidae",
+          "Danioninae",
+          "Danio"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "NAD(+) hydrolase SARM1"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADase SARM1"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "28334607"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADP(+) hydrolase SARM1"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000250",
+                    "source": "UniProtKB",
+                    "id": "Q6SZW1"
+                  }
+                ],
+                "value": "3.2.2.-"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "Q6SZW1"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein 1"
+            }
+          }
+        ],
+        "flag": "Precursor"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "ZFIN",
+                "id": "ZDB-GENE-040219-1"
+              }
+            ],
+            "value": "sarm1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 713
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000EB6CF2"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "D3ZUM2",
+      "organism": {
+        "scientificName": "Rattus norvegicus",
+        "commonName": "Rat",
+        "taxonId": 10116,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Rattus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "NAD(+) hydrolase SARM1"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADase SARM1"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "Q6SZW1"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADP(+) hydrolase SARM1"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000250",
+                    "source": "UniProtKB",
+                    "id": "Q6SZW1"
+                  }
+                ],
+                "value": "3.2.2.-"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "32968873"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein 1"
+            }
+          }
+        ],
+        "flag": "Precursor"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "32968873"
+              },
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "RGD",
+                "id": "1310078"
+              }
+            ],
+            "value": "Sarm1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 724
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00001D04ED"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q6SZW1",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "NAD(+) hydrolase SARM1"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADase SARM1"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "31439792"
+                }
+              ],
+              "value": "hSARM1"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "28334607"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "30333228"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "31128467"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "31439792"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "31439793"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "33053563"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADP(+) hydrolase SARM1"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000269",
+                    "source": "PubMed",
+                    "id": "29395922"
+                  }
+                ],
+                "value": "3.2.2.-"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "11386760"
+                }
+              ],
+              "value": "Sterile alpha and Armadillo repeat protein"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "18089857"
+                },
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "Reference",
+                  "id": "Ref.2"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein 1"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "17724133"
+                }
+              ],
+              "value": "Sterile alpha motif domain-containing protein 2"
+            },
+            "shortNames": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "17724133"
+                  }
+                ],
+                "value": "MyD88-5"
+              },
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000312",
+                    "source": "HGNC",
+                    "id": "HGNC:17074"
+                  }
+                ],
+                "value": "SAM domain-containing protein 2"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "15123841"
+                }
+              ],
+              "value": "Tir-1 homolog"
+            },
+            "shortNames": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "27671644"
+                  }
+                ],
+                "value": "HsTIR"
+              }
+            ]
+          }
+        ],
+        "flag": "Precursor"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "18089857"
+              },
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "Reference",
+                "id": "Ref.2"
+              },
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "HGNC",
+                "id": "HGNC:17074"
+              }
+            ],
+            "value": "SARM1"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "9628581"
+                }
+              ],
+              "value": "KIAA0524"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "HGNC",
+                  "id": "HGNC:17074"
+                }
+              ],
+              "value": "SAMD2"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "11386760"
+                }
+              ],
+              "value": "SARM"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 724
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000021FB54"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q6PDS3",
+      "organism": {
+        "scientificName": "Mus musculus",
+        "commonName": "Mouse",
+        "taxonId": 10090,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Mus",
+          "Mus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "NAD(+) hydrolase SARM1"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADase SARM1"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "28334607"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADP(+) hydrolase SARM1"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000250",
+                    "source": "UniProtKB",
+                    "id": "Q6SZW1"
+                  }
+                ],
+                "value": "3.2.2.-"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "Reference",
+                  "id": "Ref.1"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein 1"
+            }
+          }
+        ],
+        "flag": "Precursor"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "Reference",
+                "id": "Ref.1"
+              },
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "MGI",
+                "id": "MGI:2136419"
+              }
+            ],
+            "value": "Sarm1"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "15368895"
+                }
+              ],
+              "value": "Kiaa0524"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 724
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00001D3F76"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "I3L5V6",
+      "organism": {
+        "scientificName": "Sus scrofa",
+        "commonName": "Pig",
+        "taxonId": 9823,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Laurasiatheria",
+          "Artiodactyla",
+          "Suina",
+          "Suidae",
+          "Sus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "NAD(+) hydrolase SARM1"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADase SARM1"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "Q6SZW1"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADP(+) hydrolase SARM1"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000250",
+                    "source": "UniProtKB",
+                    "id": "Q6SZW1"
+                  }
+                ],
+                "value": "3.2.2.-"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "22366489"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein 1"
+            }
+          }
+        ],
+        "flag": "Precursor"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "22366489"
+              }
+            ],
+            "value": "SARM1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 725
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00025DFDF0"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q6IDD9",
+      "organism": {
+        "scientificName": "Drosophila melanogaster",
+        "commonName": "Fruit fly",
+        "taxonId": 7227,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Ecdysozoa",
+          "Arthropoda",
+          "Hexapoda",
+          "Insecta",
+          "Pterygota",
+          "Neoptera",
+          "Endopterygota",
+          "Diptera",
+          "Brachycera",
+          "Muscomorpha",
+          "Ephydroidea",
+          "Drosophilidae",
+          "Drosophila",
+          "Sophophora"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "NAD(+) hydrolase sarm1"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADase sarm1"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "28334607"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "22678360"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein 1"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Tir-1 homolog"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "22678360"
+              },
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "FlyBase",
+                "id": "FBgn0262579"
+              }
+            ],
+            "value": "Sarm"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "22022271"
+                }
+              ],
+              "value": "Ect4"
+            }
+          ],
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "FlyBase",
+                  "id": "FBgn0262579"
+                }
+              ],
+              "value": "CG43119"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 1360
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000367D50"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q86DA5",
+      "organism": {
+        "scientificName": "Caenorhabditis elegans",
+        "taxonId": 6239,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Ecdysozoa",
+          "Nematoda",
+          "Chromadorea",
+          "Rhabditida",
+          "Rhabditina",
+          "Rhabditomorpha",
+          "Rhabditoidea",
+          "Rhabditidae",
+          "Peloderinae",
+          "Caenorhabditis"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "NAD(+) hydrolase tir-1"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "NADase tir-1"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "31439792"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Neuronal symmetry protein 2"
+            }
+          },
+          {
+            "fullName": {
+              "value": "SARM1 homolog"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "15048112"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein tir-1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "15048112"
+              },
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "WormBase",
+                "id": "F13B10.1c"
+              }
+            ],
+            "value": "tir-1"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "WormBase",
+                  "id": "F13B10.1c"
+                }
+              ],
+              "value": "nsy-2"
+            }
+          ],
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "WormBase",
+                  "id": "F13B10.1c"
+                }
+              ],
+              "value": "F13B10.1"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 981
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00004B74FD"
+      }
+    },
+    {
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "primaryAccession": "Q0D2N8",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAH40429.1"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00024128"
+              }
+            ],
+            "value": "NAD(+) hydrolase SARM1"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00011982"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00032222"
+                }
+              ],
+              "value": "NADP(+) hydrolase SARM1"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00031160"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein 1"
+            }
+          }
+        ],
+        "flag": "Fragment"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "EMBL",
+                "id": "AAH40429.1"
+              }
+            ],
+            "value": "SARM1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 710
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000E0CAE7"
+      }
+    },
+    {
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "primaryAccession": "E1BIR9",
+      "organism": {
+        "scientificName": "Bos taurus",
+        "commonName": "Bovine",
+        "taxonId": 9913,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSBTAP00000003645.6"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000009136"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Laurasiatheria",
+          "Artiodactyla",
+          "Ruminantia",
+          "Pecora",
+          "Bovidae",
+          "Bovinae",
+          "Bos"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00024128"
+              }
+            ],
+            "value": "NAD(+) hydrolase SARM1"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00011982"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00032222"
+                }
+              ],
+              "value": "NADP(+) hydrolase SARM1"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00031160"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein 1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "Ensembl",
+                "id": "ENSBTAP00000003645.6"
+              },
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "VGNC",
+                "id": "VGNC:34290"
+              }
+            ],
+            "value": "SARM1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 728
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000FC45729"
+      }
+    },
+    {
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "primaryAccession": "A0A2K6PCF4",
+      "organism": {
+        "scientificName": "Rhinopithecus roxellana",
+        "commonName": "Golden snub-nosed monkey",
+        "synonyms": [
+          "Pygathrix roxellana"
+        ],
+        "taxonId": 61622,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Ensembl",
+            "id": "ENSRROP00000014200.1"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "Proteomes",
+            "id": "UP000233200"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Cercopithecidae",
+          "Colobinae",
+          "Rhinopithecus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00024128"
+              }
+            ],
+            "value": "NAD(+) hydrolase SARM1"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00011982"
+                }
+              ],
+              "value": "3.2.2.6"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00032222"
+                }
+              ],
+              "value": "NADP(+) hydrolase SARM1"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00031160"
+                }
+              ],
+              "value": "Sterile alpha and TIR motif-containing protein 1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "Ensembl",
+                "id": "ENSRROP00000014200.1"
+              }
+            ],
+            "value": "SARM1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 724
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0005333D35"
+      }
+    }
+  ]
+}
