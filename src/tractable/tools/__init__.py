@@ -23,7 +23,7 @@ from __future__ import annotations
 
 from typing import Protocol
 
-from .schema import (
+from ..schema import (
     Candidate,
     Domain,
     ExperimentalStructure,
