@@ -1,0 +1,803 @@
+{
+  "results": [
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q8RXD4",
+      "organism": {
+        "scientificName": "Arabidopsis thaliana",
+        "commonName": "Mouse-ear cress",
+        "taxonId": 3702,
+        "lineage": [
+          "Eukaryota",
+          "Viridiplantae",
+          "Streptophyta",
+          "Embryophyta",
+          "Tracheophyta",
+          "Spermatophyta",
+          "Magnoliopsida",
+          "eudicotyledons",
+          "Gunneridae",
+          "Pentapetalae",
+          "rosids",
+          "malvids",
+          "Brassicales",
+          "Brassicaceae",
+          "Camelineae",
+          "Arabidopsis"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "12582233"
+              }
+            ],
+            "value": "Protein BREAST CANCER SUSCEPTIBILITY 1 homolog"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "12582233"
+                }
+              ],
+              "value": "AtBRCA1"
+            }
+          ]
+        }
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "12582233"
+              }
+            ],
+            "value": "BRCA1"
+          },
+          "orderedLocusNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "Araport",
+                  "id": "AT4G21070"
+                }
+              ],
+              "value": "At4g21070"
+            }
+          ],
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "EMBL",
+                  "id": "CAB45902.1"
+                }
+              ],
+              "value": "T13K14.230"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 941
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00000038BB"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q95153",
+      "organism": {
+        "scientificName": "Canis lupus familiaris",
+        "commonName": "Dog",
+        "synonyms": [
+          "Canis familiaris"
+        ],
+        "taxonId": 9615,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Laurasiatheria",
+          "Carnivora",
+          "Caniformia",
+          "Canidae",
+          "Canis"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Breast cancer type 1 susceptibility protein homolog"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P38398"
+                }
+              ],
+              "value": "2.3.2.27"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "RING-type E3 ubiquitin transferase BRCA1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "BRCA1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1878
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000126AC6"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P38398",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Breast cancer type 1 susceptibility protein"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "10500182"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "12887909"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "12890688"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "16818604"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "18056443"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "20351172"
+                }
+              ],
+              "value": "2.3.2.27"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "RING finger protein 53"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "RING-type E3 ubiquitin transferase BRCA1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "BRCA1"
+          },
+          "synonyms": [
+            {
+              "value": "RNF53"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 1863
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000126AC8"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P48754",
+      "organism": {
+        "scientificName": "Mus musculus",
+        "commonName": "Mouse",
+        "taxonId": 10090,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Mus",
+          "Mus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Breast cancer type 1 susceptibility protein homolog"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P38398"
+                }
+              ],
+              "value": "2.3.2.27"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "RING-type E3 ubiquitin transferase BRCA1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "Brca1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1812
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00000214E1"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "O54952",
+      "organism": {
+        "scientificName": "Rattus norvegicus",
+        "commonName": "Rat",
+        "taxonId": 10116,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Rattus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Breast cancer type 1 susceptibility protein homolog"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P38398"
+                }
+              ],
+              "value": "2.3.2.27"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "RING-type E3 ubiquitin transferase BRCA1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "Brca1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1817
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00000E8761"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q864U1",
+      "organism": {
+        "scientificName": "Bos taurus",
+        "commonName": "Bovine",
+        "taxonId": 9913,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Laurasiatheria",
+          "Artiodactyla",
+          "Ruminantia",
+          "Pecora",
+          "Bovidae",
+          "Bovinae",
+          "Bos"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Breast cancer type 1 susceptibility protein homolog"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P38398"
+                }
+              ],
+              "value": "2.3.2.27"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "RING-type E3 ubiquitin transferase BRCA1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "BRCA1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1849
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000185CC2"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "B6VQ60",
+      "organism": {
+        "scientificName": "Caenorhabditis elegans",
+        "taxonId": 6239,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "Proteomes",
+            "id": "UP000001940"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Ecdysozoa",
+          "Nematoda",
+          "Chromadorea",
+          "Rhabditida",
+          "Rhabditina",
+          "Rhabditomorpha",
+          "Rhabditoidea",
+          "Rhabditidae",
+          "Peloderinae",
+          "Caenorhabditis"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000250",
+                "source": "UniProtKB",
+                "id": "P38398"
+              }
+            ],
+            "value": "Breast cancer type 1 susceptibility protein homolog"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "16628214"
+                }
+              ],
+              "value": "2.3.2.27"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P38398"
+                }
+              ],
+              "value": "RING-type E3 ubiquitin transferase BRCA1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "14711411"
+              },
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "WormBase",
+                "id": "C36A4.8a"
+              }
+            ],
+            "value": "brc-1"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "WormBase",
+                  "id": "C36A4.8a"
+                }
+              ],
+              "value": "C36A4.8"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 609
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0013A83F04"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q6J6J0",
+      "organism": {
+        "scientificName": "Pongo pygmaeus",
+        "commonName": "Bornean orangutan",
+        "taxonId": 9600,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Pongo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Breast cancer type 1 susceptibility protein homolog"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P38398"
+                }
+              ],
+              "value": "2.3.2.27"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "RING-type E3 ubiquitin transferase BRCA1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "BRCA1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1863
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00003B02E1"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q6J6I8",
+      "organism": {
+        "scientificName": "Gorilla gorilla gorilla",
+        "commonName": "Western lowland gorilla",
+        "taxonId": 9595,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Gorilla"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Breast cancer type 1 susceptibility protein homolog"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P38398"
+                }
+              ],
+              "value": "2.3.2.27"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "RING-type E3 ubiquitin transferase BRCA1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "BRCA1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1863
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00003B02E3"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q6J6I9",
+      "organism": {
+        "scientificName": "Macaca mulatta",
+        "commonName": "Rhesus macaque",
+        "taxonId": 9544,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Cercopithecidae",
+          "Cercopithecinae",
+          "Macaca"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Breast cancer type 1 susceptibility protein homolog"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P38398"
+                }
+              ],
+              "value": "2.3.2.27"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "RING-type E3 ubiquitin transferase BRCA1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "BRCA1"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1863
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00003B02E2"
+      }
+    }
+  ]
+}

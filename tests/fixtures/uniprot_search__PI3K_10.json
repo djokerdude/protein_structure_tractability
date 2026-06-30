@@ -1,0 +1,899 @@
+{
+  "results": [
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P42339",
+      "organism": {
+        "scientificName": "Arabidopsis thaliana",
+        "commonName": "Mouse-ear cress",
+        "taxonId": 3702,
+        "lineage": [
+          "Eukaryota",
+          "Viridiplantae",
+          "Streptophyta",
+          "Embryophyta",
+          "Tracheophyta",
+          "Spermatophyta",
+          "Magnoliopsida",
+          "eudicotyledons",
+          "Gunneridae",
+          "Pentapetalae",
+          "rosids",
+          "malvids",
+          "Brassicales",
+          "Brassicaceae",
+          "Camelineae",
+          "Arabidopsis"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "7972072"
+              }
+            ],
+            "value": "Phosphatidylinositol 3-kinase VPS34"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P22543"
+                }
+              ],
+              "value": "2.7.1.137"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "7972072"
+                }
+              ],
+              "value": "PI3-kinase VPS34"
+            },
+            "shortNames": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "7972072"
+                  }
+                ],
+                "value": "AtVPS34"
+              },
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "7972072"
+                  }
+                ],
+                "value": "PI3K VPS34"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "7972072"
+                }
+              ],
+              "value": "PtdIns-3-kinase VSP34"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "7972072"
+              }
+            ],
+            "value": "VPS34"
+          },
+          "orderedLocusNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "Araport",
+                  "id": "AT1G60490"
+                }
+              ],
+              "value": "At1g60490"
+            }
+          ],
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "EMBL",
+                  "id": "AAB71971.1"
+                }
+              ],
+              "value": "F8A5.4"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 814
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000131A86"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q8NEB9",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 3-kinase catalytic subunit type 3"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase type 3"
+            },
+            {
+              "value": "PI3K type 3"
+            },
+            {
+              "value": "PtdIns-3-kinase type 3"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "7628435"
+                }
+              ],
+              "value": "2.7.1.137"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphatidylinositol 3-kinase p100 subunit"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Phosphoinositide-3-kinase class 3"
+            }
+          },
+          {
+            "fullName": {
+              "value": "hVps34"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "HGNC",
+                "id": "HGNC:8974"
+              }
+            ],
+            "value": "PIK3C3"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "VPS34"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 887
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00000708CE"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "O00750",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 4-phosphate 3-kinase C2 domain-containing subunit beta"
+          },
+          "shortNames": [
+            {
+              "value": "PI3K-C2-beta"
+            },
+            {
+              "value": "PtdIns-3-kinase C2 subunit beta"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "10805725"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "11533253"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "9830063"
+                }
+              ],
+              "value": "2.7.1.137"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "10805725"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "9830063"
+                }
+              ],
+              "value": "2.7.1.154"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "C2-PI3K"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Phosphoinositide 3-kinase-C2-beta"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "PIK3C2B"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1634
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00002056D1"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q5UE93",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphoinositide 3-kinase regulatory subunit 6"
+          }
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphoinositide 3-kinase gamma adapter protein of 87 kDa"
+            }
+          },
+          {
+            "fullName": {
+              "value": "p84 PI3K adapter protein"
+            },
+            "shortNames": [
+              {
+                "value": "p84 PIKAP"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "value": "p87 PI3K adapter protein"
+            },
+            "shortNames": [
+              {
+                "value": "p87PIKAP"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "PIK3R6"
+          },
+          "synonyms": [
+            {
+              "value": "C17orf38"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 754
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000043463"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P54673",
+      "organism": {
+        "scientificName": "Dictyostelium discoideum",
+        "commonName": "Social amoeba",
+        "taxonId": 44689,
+        "lineage": [
+          "Eukaryota",
+          "Amoebozoa",
+          "Evosea",
+          "Eumycetozoa",
+          "Dictyostelia",
+          "Dictyosteliales",
+          "Dictyosteliaceae",
+          "Dictyostelium"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 3-kinase 1"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase"
+            },
+            {
+              "value": "PI3K"
+            },
+            {
+              "value": "PtdIns-3-kinase"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "value": "2.7.1.137"
+            }
+          ]
+        }
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "pikA"
+          },
+          "synonyms": [
+            {
+              "value": "pik1"
+            }
+          ],
+          "orfNames": [
+            {
+              "value": "DDB_G0278727"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 1571
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00004E2C11"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P54675",
+      "organism": {
+        "scientificName": "Dictyostelium discoideum",
+        "commonName": "Social amoeba",
+        "taxonId": 44689,
+        "lineage": [
+          "Eukaryota",
+          "Amoebozoa",
+          "Evosea",
+          "Eumycetozoa",
+          "Dictyostelia",
+          "Dictyosteliales",
+          "Dictyosteliaceae",
+          "Dictyostelium"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 3-kinase 3"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase"
+            },
+            {
+              "value": "PI3K"
+            },
+            {
+              "value": "PtdIns-3-kinase"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "value": "2.7.1.137"
+            }
+          ]
+        }
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "pikC"
+          },
+          "synonyms": [
+            {
+              "value": "pik3"
+            }
+          ],
+          "orfNames": [
+            {
+              "value": "DDB_G0275011"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 1697
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00004E4804"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P54674",
+      "organism": {
+        "scientificName": "Dictyostelium discoideum",
+        "commonName": "Social amoeba",
+        "taxonId": 44689,
+        "lineage": [
+          "Eukaryota",
+          "Amoebozoa",
+          "Evosea",
+          "Eumycetozoa",
+          "Dictyostelia",
+          "Dictyosteliales",
+          "Dictyosteliaceae",
+          "Dictyostelium"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 3-kinase 2"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase"
+            },
+            {
+              "value": "PI3K"
+            },
+            {
+              "value": "PtdIns-3-kinase"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "value": "2.7.1.137"
+            }
+          ]
+        }
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "pikB"
+          },
+          "synonyms": [
+            {
+              "value": "pik2"
+            }
+          ],
+          "orfNames": [
+            {
+              "value": "DDB_G0283081"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 1857
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00004E32DF"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q3U6Q4",
+      "organism": {
+        "scientificName": "Mus musculus",
+        "commonName": "Mouse",
+        "taxonId": 10090,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Mus",
+          "Mus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphoinositide 3-kinase regulatory subunit 6"
+          }
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphoinositide 3-kinase gamma adapter protein of 87 kDa"
+            }
+          },
+          {
+            "fullName": {
+              "value": "p84 PI3K adapter protein"
+            },
+            "shortNames": [
+              {
+                "value": "p84 PIKAP"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "value": "p87 PI3K adapter protein"
+            },
+            "shortNames": [
+              {
+                "value": "p87PIKAP"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "Pik3r6"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 756
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00001E5D49"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "O75747",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Phosphatidylinositol 3-kinase C2 domain-containing subunit gamma"
+          },
+          "shortNames": [
+            {
+              "value": "PI3K-C2-gamma"
+            },
+            {
+              "value": "PtdIns-3-kinase C2 subunit gamma"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "O70173"
+                }
+              ],
+              "value": "2.7.1.137"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "O70173"
+                }
+              ],
+              "value": "2.7.1.154"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphoinositide 3-kinase-C2-gamma"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "PIK3C2G"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1486
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00020655D2"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q6ZNE5",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "19050071"
+              }
+            ],
+            "value": "Beclin 1-associated autophagy-related key regulator"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "19050071"
+                }
+              ],
+              "value": "Barkor"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "19270696"
+                }
+              ],
+              "value": "Autophagy-related protein 14-like protein"
+            },
+            "shortNames": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "19270696"
+                  }
+                ],
+                "value": "Atg14L"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "18843052"
+              }
+            ],
+            "value": "ATG14"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "19270696"
+                }
+              ],
+              "value": "ATG14L"
+            },
+            {
+              "value": "KIAA0831"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 492
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00001FD5B2"
+      }
+    }
+  ]
+}

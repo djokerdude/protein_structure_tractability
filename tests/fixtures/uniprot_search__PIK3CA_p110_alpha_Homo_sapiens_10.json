@@ -1,0 +1,911 @@
+{
+  "results": [
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P42336",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase subunit alpha"
+            },
+            {
+              "value": "PI3K-alpha"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "28676499"
+                }
+              ],
+              "value": "PI3Kalpha"
+            },
+            {
+              "value": "PtdIns-3-kinase subunit alpha"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "23936502"
+                }
+              ],
+              "value": "2.7.1.137"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "15135396"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "28676499"
+                }
+              ],
+              "value": "2.7.1.153"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase 110 kDa catalytic subunit alpha"
+            },
+            "shortNames": [
+              {
+                "value": "PtdIns-3-kinase subunit p110-alpha"
+              },
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "15135396"
+                  }
+                ],
+                "value": "p110alpha"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "28676499"
+                }
+              ],
+              "value": "Phosphoinositide 3-kinase alpha"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Phosphoinositide-3-kinase catalytic alpha polypeptide"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Serine/threonine protein kinase PIK3CA"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000269",
+                    "source": "PubMed",
+                    "id": "23936502"
+                  },
+                  {
+                    "evidenceCode": "ECO:0000269",
+                    "source": "PubMed",
+                    "id": "28676499"
+                  }
+                ],
+                "value": "2.7.11.1"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "PIK3CA"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1068
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000013D494"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P27986",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 3-kinase regulatory subunit alpha"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase regulatory subunit alpha"
+            },
+            {
+              "value": "PI3K regulatory subunit alpha"
+            },
+            {
+              "value": "PtdIns-3-kinase regulatory subunit alpha"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphatidylinositol 3-kinase 85 kDa regulatory subunit alpha"
+            },
+            "shortNames": [
+              {
+                "value": "PI3-kinase subunit p85-alpha"
+              },
+              {
+                "value": "PtdIns-3-kinase regulatory subunit p85-alpha"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "PIK3R1"
+          },
+          "synonyms": [
+            {
+              "value": "GRB1"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 724
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000013D9FF"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q7RTR2",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "NLR family CARD domain-containing protein 3"
+          }
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "CARD15-like protein"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "15705585"
+                }
+              ],
+              "value": "Caterpiller protein 16.2"
+            },
+            "shortNames": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "15705585"
+                  }
+                ],
+                "value": "CLR16.2"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "value": "NACHT, LRR and CARD domains-containing protein 3"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Nucleotide-binding oligomerization domain protein 3"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "NLRC3"
+          },
+          "synonyms": [
+            {
+              "value": "NOD3"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 1065
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00004CE17D"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "O00459",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 3-kinase regulatory subunit beta"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase regulatory subunit beta"
+            },
+            {
+              "value": "PI3K regulatory subunit beta"
+            },
+            {
+              "value": "PtdIns-3-kinase regulatory subunit beta"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphatidylinositol 3-kinase 85 kDa regulatory subunit beta"
+            },
+            "shortNames": [
+              {
+                "value": "PI3-kinase subunit p85-beta"
+              },
+              {
+                "value": "PtdIns-3-kinase regulatory subunit p85-beta"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "PIK3R2"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 728
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000006EF95"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q92569",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 3-kinase regulatory subunit gamma"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase regulatory subunit gamma"
+            },
+            {
+              "value": "PI3K regulatory subunit gamma"
+            },
+            {
+              "value": "PtdIns-3-kinase regulatory subunit gamma"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphatidylinositol 3-kinase 55 kDa regulatory subunit gamma"
+            },
+            "shortNames": [
+              {
+                "value": "PI3-kinase subunit p55-gamma"
+              },
+              {
+                "value": "PtdIns-3-kinase regulatory subunit p55-gamma"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "value": "p55PIK"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "PIK3R3"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 461
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000013D318"
+      }
+    },
+    {
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "primaryAccession": "Q8N381",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "AAH21622.1"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00071518"
+              }
+            ],
+            "value": "Phosphatidylinositol 3-kinase regulatory subunit gamma"
+          }
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00078795"
+                }
+              ],
+              "value": "Phosphatidylinositol 3-kinase 55 kDa regulatory subunit gamma"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00082483"
+                }
+              ],
+              "value": "p55PIK"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "EMBL",
+                "id": "AAH21622.1"
+              }
+            ],
+            "value": "PIK3R3"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 461
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000070374"
+      }
+    },
+    {
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "primaryAccession": "A0A6B9QIS5",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "QHF16615.1"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "submissionNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "source": "EMBL",
+                  "id": "QHF16615.1"
+                }
+              ],
+              "value": "p110 alpha"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000313",
+                    "source": "EMBL",
+                    "id": "QHF16615.1"
+                  }
+                ],
+                "value": "2.7.1.153"
+              }
+            ]
+          }
+        ],
+        "flag": "Fragment"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "EMBL",
+                "id": "QHF16615.1"
+              }
+            ],
+            "value": "PIK3CA"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 17
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0013671611"
+      }
+    },
+    {
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "primaryAccession": "A0A6B9QKK2",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "QHF16614.1"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "submissionNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "source": "EMBL",
+                  "id": "QHF16614.1"
+                }
+              ],
+              "value": "p110 alpha"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000313",
+                    "source": "EMBL",
+                    "id": "QHF16614.1"
+                  }
+                ],
+                "value": "2.7.1.153"
+              }
+            ]
+          }
+        ],
+        "flag": "Fragment"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "EMBL",
+                "id": "QHF16614.1"
+              }
+            ],
+            "value": "PIK3CA"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 17
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI001366D3A4"
+      }
+    },
+    {
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "primaryAccession": "Q68CY7",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "CAH18443.1"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00071518"
+              }
+            ],
+            "value": "Phosphatidylinositol 3-kinase regulatory subunit gamma"
+          }
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00078795"
+                }
+              ],
+              "value": "Phosphatidylinositol 3-kinase 55 kDa regulatory subunit gamma"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00082483"
+                }
+              ],
+              "value": "p55PIK"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "EMBL",
+                "id": "CAH18443.1"
+              }
+            ],
+            "value": "DKFZp686P05226"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 461
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000041A19C"
+      }
+    },
+    {
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "primaryAccession": "Q7Z3W2",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "source": "EMBL",
+            "id": "CAD97630.1"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "ARBA",
+                "id": "ARBA00071518"
+              }
+            ],
+            "value": "Phosphatidylinositol 3-kinase regulatory subunit gamma"
+          }
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00078795"
+                }
+              ],
+              "value": "Phosphatidylinositol 3-kinase 55 kDa regulatory subunit gamma"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "source": "ARBA",
+                  "id": "ARBA00082483"
+                }
+              ],
+              "value": "p55PIK"
+            }
+          }
+        ],
+        "flag": "Fragment"
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "source": "EMBL",
+                "id": "CAD97630.1"
+              }
+            ],
+            "value": "DKFZp686F1293"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 494
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00001A995C"
+      }
+    }
+  ]
+}

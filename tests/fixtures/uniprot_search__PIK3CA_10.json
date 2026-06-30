@@ -1,0 +1,1169 @@
+{
+  "results": [
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P42336",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase subunit alpha"
+            },
+            {
+              "value": "PI3K-alpha"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "28676499"
+                }
+              ],
+              "value": "PI3Kalpha"
+            },
+            {
+              "value": "PtdIns-3-kinase subunit alpha"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "23936502"
+                }
+              ],
+              "value": "2.7.1.137"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "15135396"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "28676499"
+                }
+              ],
+              "value": "2.7.1.153"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase 110 kDa catalytic subunit alpha"
+            },
+            "shortNames": [
+              {
+                "value": "PtdIns-3-kinase subunit p110-alpha"
+              },
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "15135396"
+                  }
+                ],
+                "value": "p110alpha"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "28676499"
+                }
+              ],
+              "value": "Phosphoinositide 3-kinase alpha"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Phosphoinositide-3-kinase catalytic alpha polypeptide"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Serine/threonine protein kinase PIK3CA"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000269",
+                    "source": "PubMed",
+                    "id": "23936502"
+                  },
+                  {
+                    "evidenceCode": "ECO:0000269",
+                    "source": "PubMed",
+                    "id": "28676499"
+                  }
+                ],
+                "value": "2.7.11.1"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "PIK3CA"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1068
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000013D494"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q5T0W9",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Protein FAM83B"
+          }
+        }
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "HGNC",
+                "id": "HGNC:21357"
+              }
+            ],
+            "value": "FAM83B"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "HGNC",
+                  "id": "HGNC:21357"
+                }
+              ],
+              "value": "C6orf143"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 1011
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00001D81EC"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q9UKG1",
+      "organism": {
+        "scientificName": "Homo sapiens",
+        "commonName": "Human",
+        "taxonId": 9606,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Primates",
+          "Haplorrhini",
+          "Catarrhini",
+          "Hominidae",
+          "Homo"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "DCC-interacting protein 13-alpha"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "12011067"
+                }
+              ],
+              "value": "Dip13-alpha"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "Adapter protein containing PH domain, PTB domain and leucine zipper motif 1"
+            }
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "HGNC",
+                "id": "HGNC:24035"
+              }
+            ],
+            "value": "APPL1"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "EMBL",
+                  "id": "AAH28599.1"
+                }
+              ],
+              "value": "APPL"
+            },
+            {
+              "value": "DIP13A"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "EMBL",
+                  "id": "BAA92666.2"
+                }
+              ],
+              "value": "KIAA1428"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 709
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00000712DA"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "A0A0G2K344",
+      "organism": {
+        "scientificName": "Rattus norvegicus",
+        "commonName": "Rat",
+        "taxonId": 10116,
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000312",
+            "source": "Proteomes",
+            "id": "UP000002494"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Rattus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "RGD",
+                "id": "620916"
+              }
+            ],
+            "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform"
+          },
+          "shortNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "PI3-kinase subunit alpha"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "PI3K-alpha"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "PI3Kalpha"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "PtdIns-3-kinase subunit alpha"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P42336"
+                }
+              ],
+              "value": "2.7.1.137"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P42336"
+                }
+              ],
+              "value": "2.7.1.153"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase 110 kDa catalytic subunit alpha"
+            },
+            "shortNames": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000305"
+                  }
+                ],
+                "value": "PtdIns-3-kinase subunit p110-alpha"
+              },
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "20236230"
+                  }
+                ],
+                "value": "p110alpha"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "Phosphoinositide-3-kinase catalytic alpha polypeptide"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000305"
+                }
+              ],
+              "value": "Serine/threonine protein kinase PIK3CA"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000250",
+                    "source": "UniProtKB",
+                    "id": "P32871"
+                  }
+                ],
+                "value": "2.7.11.1"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "RGD",
+                "id": "620916"
+              }
+            ],
+            "value": "Pik3ca"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1068
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0001C0B38D"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P42337",
+      "organism": {
+        "scientificName": "Mus musculus",
+        "commonName": "Mouse",
+        "taxonId": 10090,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Mus",
+          "Mus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase subunit alpha"
+            },
+            {
+              "value": "PI3K-alpha"
+            },
+            {
+              "value": "PI3Kalpha"
+            },
+            {
+              "value": "PtdIns-3-kinase subunit alpha"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P42336"
+                }
+              ],
+              "value": "2.7.1.137"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P42336"
+                }
+              ],
+              "value": "2.7.1.153"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase 110 kDa catalytic subunit alpha"
+            },
+            "shortNames": [
+              {
+                "value": "PtdIns-3-kinase subunit p110-alpha"
+              },
+              {
+                "value": "p110alpha"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "value": "Phosphoinositide-3-kinase catalytic alpha polypeptide"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Serine/threonine protein kinase PIK3CA"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000250",
+                    "source": "UniProtKB",
+                    "id": "P32871"
+                  }
+                ],
+                "value": "2.7.11.1"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "Pik3ca"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1068
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00001F06AE"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P32871",
+      "organism": {
+        "scientificName": "Bos taurus",
+        "commonName": "Bovine",
+        "taxonId": 9913,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Laurasiatheria",
+          "Artiodactyla",
+          "Ruminantia",
+          "Pecora",
+          "Bovidae",
+          "Bovinae",
+          "Bos"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform"
+          },
+          "shortNames": [
+            {
+              "value": "PI3-kinase subunit alpha"
+            },
+            {
+              "value": "PI3K-alpha"
+            },
+            {
+              "value": "PI3Kalpha"
+            },
+            {
+              "value": "PtdIns-3-kinase subunit alpha"
+            }
+          ],
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "1322797"
+                },
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "14729945"
+                },
+                {
+                  "evidenceCode": "ECO:0000305",
+                  "source": "PubMed",
+                  "id": "15178440"
+                }
+              ],
+              "value": "2.7.1.137"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "P42336"
+                }
+              ],
+              "value": "2.7.1.153"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Phosphatidylinositol 4,5-bisphosphate 3-kinase 110 kDa catalytic subunit alpha"
+            },
+            "shortNames": [
+              {
+                "value": "PtdIns-3-kinase subunit p110-alpha"
+              },
+              {
+                "value": "p110alpha"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "value": "Phosphoinositide-3-kinase catalytic alpha polypeptide"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Serine/threonine protein kinase PIK3CA"
+            },
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000269",
+                    "source": "PubMed",
+                    "id": "14729945"
+                  },
+                  {
+                    "evidenceCode": "ECO:0000269",
+                    "source": "PubMed",
+                    "id": "15178440"
+                  }
+                ],
+                "value": "2.7.11.1"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "PIK3CA"
+          }
+        }
+      ],
+      "sequence": {
+        "length": 1068
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000002F88B"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P35569",
+      "organism": {
+        "scientificName": "Mus musculus",
+        "commonName": "Mouse",
+        "taxonId": 10090,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Mus",
+          "Mus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Insulin receptor substrate 1"
+          },
+          "shortNames": [
+            {
+              "value": "IRS-1"
+            }
+          ]
+        }
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "Irs1"
+          },
+          "synonyms": [
+            {
+              "value": "Irs-1"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 1233
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00000282F4"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q5FVJ0",
+      "organism": {
+        "scientificName": "Rattus norvegicus",
+        "commonName": "Rat",
+        "taxonId": 10116,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Rattus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Protein RUFY3"
+          }
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000312",
+                  "source": "RGD",
+                  "id": "1565242"
+                }
+              ],
+              "value": "RUN and FYVE domain-containing protein 3"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "Q9D394"
+                }
+              ],
+              "value": "Rap2-interacting protein x"
+            },
+            "shortNames": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000250",
+                    "source": "UniProtKB",
+                    "id": "Q9D394"
+                  }
+                ],
+                "value": "RIPx"
+              }
+            ]
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "17439943"
+                }
+              ],
+              "value": "Single axon-regulated protein"
+            },
+            "shortNames": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "17439943"
+                  }
+                ],
+                "value": "Singar"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "RGD",
+                "id": "1565242"
+              }
+            ],
+            "value": "Rufy3"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000250",
+                  "source": "UniProtKB",
+                  "id": "Q9D394"
+                }
+              ],
+              "value": "Ripx"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 469
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI0000181386"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "P25976",
+      "organism": {
+        "scientificName": "Mus musculus",
+        "commonName": "Mouse",
+        "taxonId": 10090,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Mus",
+          "Mus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "value": "Nucleolar transcription factor 1"
+          }
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Upstream-binding factor 1"
+            },
+            "shortNames": [
+              {
+                "value": "UBF-1"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "value": "Ubtf"
+          },
+          "synonyms": [
+            {
+              "value": "Tcfubf"
+            },
+            {
+              "value": "Ubf-1"
+            },
+            {
+              "value": "Ubf1"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 765
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI00000279B4"
+      }
+    },
+    {
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "primaryAccession": "Q60766",
+      "organism": {
+        "scientificName": "Mus musculus",
+        "commonName": "Mouse",
+        "taxonId": 10090,
+        "lineage": [
+          "Eukaryota",
+          "Metazoa",
+          "Chordata",
+          "Craniata",
+          "Vertebrata",
+          "Euteleostomi",
+          "Mammalia",
+          "Eutheria",
+          "Euarchontoglires",
+          "Glires",
+          "Rodentia",
+          "Myomorpha",
+          "Muroidea",
+          "Muridae",
+          "Murinae",
+          "Mus",
+          "Mus"
+        ]
+      },
+      "proteinDescription": {
+        "recommendedName": {
+          "fullName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000305"
+              }
+            ],
+            "value": "Immunity-related GTPase family M protein 1"
+          },
+          "ecNumbers": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000269",
+                  "source": "PubMed",
+                  "id": "19620982"
+                }
+              ],
+              "value": "3.6.5.-"
+            }
+          ]
+        },
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Interferon-inducible GTPase 3"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "17911638"
+                }
+              ],
+              "value": "Interferon-inducible protein 1"
+            }
+          },
+          {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "source": "PubMed",
+                  "id": "11457893"
+                }
+              ],
+              "value": "LPS-stimulated RAW 264.7 macrophage protein 47"
+            },
+            "shortNames": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000303",
+                    "source": "PubMed",
+                    "id": "11457893"
+                  }
+                ],
+                "value": "LRG-47"
+              }
+            ]
+          }
+        ]
+      },
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "source": "PubMed",
+                "id": "17911638"
+              },
+              {
+                "evidenceCode": "ECO:0000312",
+                "source": "MGI",
+                "id": "MGI:107567"
+              }
+            ],
+            "value": "Irgm1"
+          },
+          "synonyms": [
+            {
+              "value": "Ifi1"
+            },
+            {
+              "value": "Iigp3"
+            },
+            {
+              "value": "Irgm"
+            }
+          ]
+        }
+      ],
+      "sequence": {
+        "length": 409
+      },
+      "extraAttributes": {
+        "uniParcId": "UPI000002849E"
+      }
+    }
+  ]
+}

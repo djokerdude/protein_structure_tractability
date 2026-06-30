@@ -1,0 +1,37 @@
+[
+  {
+    "rcsb_id": "1Y98",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 16101277,
+      "title": "Structural Basis for Cell Cycle Checkpoint Control by the BRCA1-CtIP Complex."
+    }
+  },
+  {
+    "rcsb_id": "8RS8",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 40595496,
+      "title": "The human RIF1-Long isoform interacts with BRCA1 to promote recombinational fork repair under DNA replication stress."
+    }
+  },
+  {
+    "rcsb_id": "4Y2G",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 26778126,
+      "title": "Structure of BRCA1-BRCT/Abraxas Complex Reveals Phosphorylation-Dependent BRCT Dimerization at DNA Damage Sites."
+    }
+  },
+  {
+    "rcsb_id": "4IGK",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 24073851,
+      "title": "Structural Basis for the BRCA1 BRCT Interaction with the Proteins ATRIP and BAAT1."
+    }
+  },
+  {
+    "rcsb_id": "4IFI",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 24073851,
+      "title": "Structural Basis for the BRCA1 BRCT Interaction with the Proteins ATRIP and BAAT1."
+    }
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "rcsb_id": "4L1B",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 24900786,
+      "title": "Crystal Structures of PI3K alpha Complexed with PI103 and Its Derivatives: New Directions for Inhibitors Design."
+    }
+  },
+  {
+    "rcsb_id": "5UKJ",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 28433539,
+      "title": "Rationally Designed PI3K alpha Mutants to Mimic ATR and Their Use to Understand Binding Specificity of ATR Inhibitors."
+    }
+  },
+  {
+    "rcsb_id": "5UK8",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 28433539,
+      "title": "Rationally Designed PI3K alpha Mutants to Mimic ATR and Their Use to Understand Binding Specificity of ATR Inhibitors."
+    }
+  },
+  {
+    "rcsb_id": "5FI4",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": 26774655,
+      "title": "Discovery of imidazo[1,2-a]-pyridine inhibitors of pan-PI3 kinases that are efficacious in a mouse xenograft model."
+    }
+  },
+  {
+    "rcsb_id": "4ZOP",
+    "rcsb_primary_citation": {
+      "pdbx_database_id_PubMed": null,
+      "title": "Co-crystal Structure of the Lipid Kinase PI3K alpha with a selective phosphatidylinositol-3 kinase alpha inhibitorCo-crystal Structure of the Lipid Kinase PI3K alpha with a selective phosphatidylinositol-3 kinase alpha inhibitor"
+    }
+  }
+]

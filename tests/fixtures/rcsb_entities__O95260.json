@@ -1,0 +1,24 @@
+[
+  {
+    "entry_id": "8UAU",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 5.7,
+    "unp_ranges": [
+      [
+        2,
+        518
+      ]
+    ]
+  },
+  {
+    "entry_id": "8TZV",
+    "method": "ELECTRON MICROSCOPY",
+    "resolution": 2.8,
+    "unp_ranges": [
+      [
+        2,
+        518
+      ]
+    ]
+  }
+]
